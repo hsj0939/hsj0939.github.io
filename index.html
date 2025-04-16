@@ -229,6 +229,7 @@
     const navLinks = document.querySelectorAll('.sidebar ul li a');
     const content = document.querySelector('.content');
 
+    // 스크롤 시 active 처리
     content.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(section => {
@@ -237,13 +238,29 @@
           current = section.getAttribute('id');
         }
       });
+      updateActiveLink(current);
+    });
+
+    // 클릭 시 active 처리
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        // 링크 이동 후 active 갱신
+        setTimeout(() => {
+          const targetId = link.getAttribute('href').substring(1);
+          updateActiveLink(targetId);
+        }, 0);
+      });
+    });
+
+    // active 클래스 갱신 함수
+    function updateActiveLink(currentId) {
       navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
+        if (link.getAttribute('href') === `#${currentId}`) {
           link.classList.add('active');
         }
       });
-    });
+    }
 
     function toggleMenu() {
       document.querySelector('.sidebar').classList.toggle('open');
