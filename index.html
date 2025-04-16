@@ -13,12 +13,11 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #121212;
       display: flex;
       height: 100vh;
       overflow: hidden;
-      color: #333;
-      transition: background-color 0.3s, color 0.3s;
+      color: #ddd;
     }
 
     .menu-toggle {
@@ -27,8 +26,8 @@
       top: 20px;
       left: 20px;
       z-index: 1100;
-      background: teal;
-      color: white;
+      background: #222;
+      color: #ffce45;
       padding: 10px 15px;
       border-radius: 5px;
       cursor: pointer;
@@ -36,9 +35,9 @@
 
     .sidebar {
       width: 220px;
-      background-color: #fff;
+      background-color: #1e1e1e;
       padding: 20px;
-      border-right: 1px solid #ddd;
+      border-right: 1px solid #333;
       overflow-y: auto;
       height: 100vh;
       box-sizing: border-box;
@@ -46,13 +45,12 @@
       position: sticky;
       top: 0;
       align-self: flex-start;
-      transition: left 0.3s ease;
     }
 
     .sidebar h3 {
       font-size: 18px;
       margin-bottom: 10px;
-      color: teal;
+      color: #ffce45;
     }
 
     .sidebar ul {
@@ -65,13 +63,13 @@
     }
 
     .sidebar ul li a {
-      color: #333;
+      color: #ccc;
       text-decoration: none;
     }
 
     .sidebar ul li a.active {
       font-weight: bold;
-      color: teal;
+      color: #ffce45;
     }
 
     .sidebar ul li a:hover {
@@ -81,207 +79,6 @@
     .content {
       flex: 1;
       padding: 40px;
-      background-color: #fff;
+      background-color: #121212;
       overflow-y: auto;
-      height: 100vh;
-      box-sizing: border-box;
-    }
-
-    .section {
-      margin-bottom: 50px;
-    }
-
-    .section h2 {
-      border-bottom: 2px solid #000;
-      padding-bottom: 5px;
-      font-size: 22px;
-      margin-bottom: 15px;
-    }
-
-    .profile {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .highlight {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .subinfo {
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    .photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #ccc;
-    }
-
-    a {
-      color: teal;
-      text-decoration: none;
-    }
-
-    .url-box {
-      border: 1px solid #ccc;
-      padding: 10px;
-      background-color: #f0f0f0;
-      font-family: monospace;
-      word-break: break-word;
-    }
-
-    /* 반응형 */
-    @media (max-width: 768px) {
-      .sidebar {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        z-index: 1000;
-        background: #fff;
-      }
-
-      .sidebar.open {
-        left: 0;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .profile {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    /* 다크모드 */
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #121212;
-        color: #ddd;
-      }
-      .sidebar {
-        background-color: #1f1f1f;
-        border-right: 1px solid #333;
-      }
-      .sidebar h3, .sidebar ul li a {
-        color: #ccc;
-      }
-      .sidebar ul li a.active {
-        color: #ffce45;
-      }
-      .content {
-        background-color: #1e1e1e;
-      }
-      .section h2 {
-        border-bottom: 2px solid #ffce45;
-      }
-      .url-box {
-        background-color: #333;
-        border-color: #555;
-        color: #eee;
-      }
-      a {
-        color: #66ccff;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="menu-toggle" onclick="toggleMenu()">☰ 메뉴</div>
-  <div class="sidebar">
-    <h3><a href="#basic">기본 정보</a></h3>
-    <ul>
-      <li><a href="#skills">기술 스택</a></li>
-      <li><a href="#projects">프로젝트</a></li>
-      <li><a href="#education">학력</a></li>
-      <li><a href="#certificate">수상 / 자격증</a></li>
-    </ul>
-  </div>
-
-  <div class="content">
-    <div class="section" id="basic">
-      <div class="profile">
-        <div>
-          <div class="highlight">황서진 이력서</div>
-          <div class="subinfo">백엔드 개발자</div>
-          <p>이메일: hseojin@dongyang.ac.kr</p>
-          <p>
-            노션 이력서:  
-            <a href="https://www.dongyang.ac.kr" target="_blank">Notion 이력서 링크</a>
-          </p>
-        </div>
-        <img src="profile.jpg" alt="프로필 사진" class="photo" />
-      </div>
-    </div>
-
-    <div class="section" id="skills">
-      <h2>기술 스택</h2>
-      <p><strong>Back End</strong> : Spring, Java, REST API, 인증/결제 시스템, 실시간 서버, 크롤링/데이터 분석</p>
-      <p><strong>Infra</strong> : Linux, Raspberry PI, Arduino, TCP/IP, AWS, 보안</p>
-      <p><strong>Front End</strong> : React, TypeScript, HTML5/CSS, React Query</p>
-      <p><strong>DB</strong> : MySQL, Oracle, MongoDB</p>
-      <p><strong>ETC</strong> : Python, Pandas, Unity, C#</p>
-    </div>
-
-    <div class="section" id="projects">
-      <h2>프로젝트</h2>
-      <p><strong>손 동작 인식 재활 솔루션</strong> (2025.03 ~ 2025.10, 8개월)</p>
-      <p>∙ 요구사항 분석 / DB 모델링 / AWS 환경 구축 / 백엔드 API 개발</p>
-      <p><strong>실시간 채팅 서버</strong> (C, pThread, Linux, Raspberry PI)</p>
-      <p>∙ pThread 기반 채팅 서버 구현 / TCP/IP 소켓 프로그래밍</p>
-      <p><strong>부동산 실거래가 분석 (Python, Pandas)</strong></p>
-      <p>∙ 부동산 데이터 크롤링 및 Pandas 기반 데이터 분석</p>
-      <p><strong>프로젝트 GitHub</strong></p>
-      <div class="url-box">https://github.com/syjung64</div>
-    </div>
-
-    <div class="section" id="education">
-      <h2>학력</h2>
-      <p><strong>동양미래대학교</strong> - 컴퓨터소프트웨어공학과 (2022.03-2026.02)</p>
-    </div>
-
-    <div class="section" id="certificate">
-      <h2>수상 / 자격증</h2>
-      <p><strong>전공동아리 EL</strong> - 손동작 게임 / 대시보드 개발 (2022.03-2026.02)</p>
-      <p><strong>동양미래 EXPO 대상</strong> (2024.11)</p>
-      <p><strong>정보처리산업기사</strong> (2024.11)</p>
-      <p><strong>AWS Practitioner</strong> (2024.11)</p>
-      <p><strong>SQLD</strong> (2024.11)</p>
-    </div>
-  </div>
-
-  <script>
-    const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.sidebar ul li a');
-    const content = document.querySelector('.content');
-
-    content.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (content.scrollTop >= sectionTop - 150) {
-          current = section.getAttribute('id');
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-          link.classList.add('active');
-        }
-      });
-    });
-
-    function toggleMenu() {
-      document.querySelector('.sidebar').classList.toggle('open');
-    }
-  </script>
-</body>
-</html>
+      height: 100
