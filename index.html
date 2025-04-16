@@ -9,15 +9,18 @@
       margin: 0;
       padding: 0;
       height: 100%;
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
-      color: #ddd;
+    a {
+      color: #4dd0e1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .menu-toggle {
@@ -26,16 +29,16 @@
       top: 20px;
       left: 20px;
       z-index: 1100;
-      background: #222;
-      color: #ffce45;
+      background: #4dd0e1;
+      color: #121212;
       padding: 10px 15px;
       border-radius: 5px;
       cursor: pointer;
     }
 
     .sidebar {
-      width: 220px;
-      background-color: #1e1e1e;
+      width: 200px;
+      background-color: #1f1f1f;
       padding: 20px;
       border-right: 1px solid #333;
       overflow-y: auto;
@@ -45,12 +48,13 @@
       position: sticky;
       top: 0;
       align-self: flex-start;
+      transition: left 0.3s ease;
     }
 
     .sidebar h3 {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 10px;
-      color: #ffce45;
+      color: #4dd0e1;
     }
 
     .sidebar ul {
@@ -59,21 +63,18 @@
     }
 
     .sidebar ul li {
-      margin: 12px 0;
+      margin: 10px 0;
     }
 
     .sidebar ul li a {
-      color: #ccc;
+      color: #e0e0e0;
       text-decoration: none;
+      transition: color 0.3s;
     }
 
     .sidebar ul li a.active {
       font-weight: bold;
-      color: #ffce45;
-    }
-
-    .sidebar ul li a:hover {
-      text-decoration: underline;
+      color: #4dd0e1;
     }
 
     .content {
@@ -86,58 +87,48 @@
     }
 
     .section {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     .section h2 {
-      border-bottom: 2px solid #ffce45;
+      border-bottom: 2px solid #4dd0e1;
       padding-bottom: 5px;
       font-size: 22px;
-      margin-bottom: 15px;
-      color: #ffce45;
     }
 
     .profile {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
     }
 
     .highlight {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: bold;
-      margin-bottom: 10px;
+      color: #ffffff;
     }
 
     .subinfo {
-      color: #aaa;
-      margin-bottom: 10px;
+      color: #bbb;
     }
 
     .photo {
       width: 150px;
       height: 150px;
-      border-radius: 50%;
+      border: 2px solid #4dd0e1;
       object-fit: cover;
-      border: 2px solid #555;
-    }
-
-    a {
-      color: #66ccff;
-      text-decoration: none;
+      border-radius: 50%;
     }
 
     .url-box {
-      border: 1px solid #555;
+      border: 1px solid #333;
       padding: 10px;
       background-color: #1f1f1f;
       font-family: monospace;
-      color: #ddd;
-      word-break: break-word;
+      word-break: break-all;
+      margin-bottom: 10px;
     }
 
-    /* 반응형 */
     @media (max-width: 768px) {
       .sidebar {
         position: fixed;
@@ -154,20 +145,20 @@
         display: block;
       }
 
-      .profile {
+      body {
         flex-direction: column;
-        align-items: flex-start;
       }
     }
   </style>
 </head>
-<body>
+<body style="display: flex;">
   <div class="menu-toggle" onclick="toggleMenu()">☰ 메뉴</div>
   <div class="sidebar">
     <h3><a href="#basic">기본 정보</a></h3>
     <ul>
       <li><a href="#skills">기술 스택</a></li>
-      <li><a href="#projects">프로젝트</a></li>
+      <li><a href="#career">경력</a></li>
+      <li><a href="#portfolio">포트폴리오</a></li>
       <li><a href="#education">학력</a></li>
       <li><a href="#certificate">수상 / 자격증</a></li>
     </ul>
@@ -180,9 +171,10 @@
           <div class="highlight">황서진 이력서</div>
           <div class="subinfo">백엔드 개발자</div>
           <p>이메일: hseojin@dongyang.ac.kr</p>
-          <p>
-            노션 이력서:  
-            <a href="https://www.dongyang.ac.kr" target="_blank">Notion 이력서 링크</a>
+          <p>노션 이력서:  
+            <a href="https://www.dongyang.ac.kr" target="_blank">
+              Notion 이력서 링크
+            </a>
           </p>
         </div>
         <img src="profile.jpg" alt="프로필 사진" class="photo" />
@@ -191,37 +183,44 @@
 
     <div class="section" id="skills">
       <h2>기술 스택</h2>
-      <p><strong>Back End</strong> : Spring, Java, REST API, 인증/결제 시스템, 실시간 서버, 크롤링/데이터 분석</p>
-      <p><strong>Infra</strong> : Linux, Raspberry PI, Arduino, TCP/IP, AWS, 보안</p>
-      <p><strong>Front End</strong> : React, TypeScript, HTML5/CSS, React Query</p>
-      <p><strong>DB</strong> : MySQL, Oracle, MongoDB</p>
-      <p><strong>ETC</strong> : Python, Pandas, Unity, C#</p>
+      <p><strong>Front End</strong>: Next.js, React, TypeScript, HTML5/CSS, React Query</p>
+      <p><strong>Back End</strong>: Spring, Java, REST API, 결제/인증 시스템, 실시간 채팅, 데이터 크롤링/분석</p>
+      <p><strong>시스템</strong>: Linux, C, Raspberry PI, Arduino, TCP/IP, AWS, 보안</p>
+      <p><strong>AR/VR</strong>: Unity, C#</p>
+      <p><strong>DB</strong>: MySQL, Oracle, MongoDB</p>
     </div>
 
-    <div class="section" id="projects">
-      <h2>프로젝트</h2>
-      <p><strong>손 동작 인식 재활 솔루션</strong> (2025.03 ~ 2025.10, 8개월)</p>
-      <p>∙ 요구사항 분석 / DB 모델링 / AWS 환경 구축 / 백엔드 API 개발</p>
-      <p><strong>실시간 채팅 서버</strong> (C, pThread, Linux, Raspberry PI)</p>
-      <p>∙ pThread 기반 채팅 서버 구현 / TCP/IP 소켓 프로그래밍</p>
-      <p><strong>부동산 실거래가 분석 (Python, Pandas)</strong></p>
-      <p>∙ 부동산 데이터 크롤링 및 Pandas 기반 데이터 분석</p>
-      <p><strong>프로젝트 GitHub</strong></p>
+    <div class="section" id="career">
+      <h2>경력</h2>
+      <p><strong>졸업작품</strong>: 손 동작 인식 재활 솔루션 (프론트엔드, 2025.03 ~ 2025.10)</p>
+      <p>∙ 요구사항 분석 및 DB 모델링</p>
+      <p>∙ AWS 환경 구축</p>
+      <p><strong>실시간 채팅 프로젝트</strong>: C, pThread, Raspberry PI, TCP/IP 소켓</p>
+    </div>
+
+    <div class="section" id="portfolio">
+      <h2>포트폴리오</h2>
+      <p><strong>졸업 작품</strong></p>
+      <div class="url-box">https://github.com/syjung64</div>
+      <p><strong>실시간 채팅</strong></p>
+      <div class="url-box">https://github.com/syjung64</div>
+      <p><strong>부동산 분석</strong></p>
       <div class="url-box">https://github.com/syjung64</div>
     </div>
 
     <div class="section" id="education">
       <h2>학력</h2>
-      <p><strong>동양미래대학교</strong> - 컴퓨터소프트웨어공학과 (2022.03-2026.02)</p>
+      <p><strong>동양미래대학교</strong> - 컴퓨터소프트웨어공학과 (2022.03-2026.2)</p>
+      <p><strong>OOO고등학교</strong></p>
     </div>
 
     <div class="section" id="certificate">
       <h2>수상 / 자격증</h2>
-      <p><strong>전공동아리 EL</strong> - 손동작 게임 / 대시보드 개발 (2022.03-2026.02)</p>
-      <p><strong>동양미래 EXPO 대상</strong> (2024.11)</p>
-      <p><strong>정보처리산업기사</strong> (2024.11)</p>
-      <p><strong>AWS Practitioner</strong> (2024.11)</p>
-      <p><strong>SQLD</strong> (2024.11)</p>
+      <p><strong>전공동아리 EL</strong> (2022.03-2026.2)</p>
+      <p>∙ 손동작 게임 (Unity/C#)</p>
+      <p>∙ OOO Dashboard (Python/Streamlit)</p>
+      <p><strong>동양미래 EXPO (COEX) 대상</strong> (2024.11)</p>
+      <p><strong>정보처리산업기사, AWS Practitioner, SQLD</strong> (2024.11)</p>
     </div>
   </div>
 
@@ -245,7 +244,6 @@
         }
       });
     });
-
 
     function toggleMenu() {
       document.querySelector('.sidebar').classList.toggle('open');
