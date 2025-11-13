@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novel AI Editor 포트폴리오</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* 부드러운 스크롤 적용 */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Tailwind 기본 글꼴(Inter) 적용 */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-gray-100 font-sans leading-relaxed">
+
+    <!-- --- 헤더 --- -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">
+                Novel AI Editor
+            </h1>
+            <div class="space-x-6 hidden md:block">
+                <a href="#problem" class="text-gray-300 hover:text-blue-400 transition-colors">문제점</a>
+                <a href="#features" class="text-gray-300 hover:text-blue-400 transition-colors">주요 기능</a>
+                <a href="#demo" class="text-gray-300 hover:text-blue-400 transition-colors">UI 데모</a>
+                <a href="#tech" class="text-gray-300 hover:text-blue-400 transition-colors">기술 스택</a>
+                <a href="#roadmap" class="text-gray-300 hover:text-blue-400 transition-colors">로드맵</a>
+            </div>
+            <a 
+                href="https://github.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+                GitHub
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- --- 히어로 섹션 --- -->
+        <section id="home" class="pt-32 pb-20 text-center bg-slate-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl md:text-7xl font-bold text-white leading-tight">
+                    당신의 이야기에<br>
+                    <span class="text-blue-400">AI 편집자</span>를 더하다
+                </h2>
+                <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
+                    'Novel AI Editor'는 소설 작가를 위한 데스크톱 AI 어시스턴트입니다. 
+                    캐릭터와 세계관의 일관성을 분석하고, 서사의 흐름을 점검하며, 
+                    전문가 수준의 피드백을 제공하여 당신의 원고를 완성시킵니다.
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="#features" class="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+                        핵심 기능 보기
+                    </a>
+                    <a href="#demo" class="bg-slate-700 text-gray-200 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-slate-600 transition-colors">
+                        UI 데모
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- 문제점 및 해결책 섹션 --- -->
+        <section id="problem" class="py-20 bg-slate-800">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold text-white mb-4">
+                            작가의 보이지 않는 장벽
+                        </h3>
+                        <p class="text-gray-300 mb-4">
+                            수십만 자의 원고 속에서 작가 혼자 모든 설정의 모순을 찾아내기란 불가능에 가깝습니다. 
+                            독자의 관점에서 객관적인 개연성을 파악하기 어려워 이야기의 몰입감을 해칠 수 있습니다.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-300">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0"></i>
+                                캐릭터 및 세계관 설정의 불일치
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0"></i>
+                                플롯 진행의 개연성 및 흐름 약점
+                            </li>
+                            <li class="flex items-center text-gray-300">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0"></i>
+                                전문가 피드백 이전의 품질 개선 한계
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-700 p-8 rounded-lg shadow-xl">
+                        <h3 class="text-3xl font-bold text-white mb-4">
+                            우리의 해결책: Novel AI Editor
+                        </h3>
+                        <p class="text-gray-300 mb-4">
+                            단순한 맞춤법 검사기를 넘어, 원고의 서사적 일관성을 심층 분석합니다. 
+                            AI가 24시간 대기하는 당신의 전문 편집 파트너가 되어줍니다.
+                        </p>
+                        <p class="text-gray-300 font-semibold">
+                            강력한 로컬 기반 보안으로, 당신의 소중한 원고는 외부로 유출되지 않습니다. 
+                            오프라인에서도 창작에 집중하세요.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- 주요 기능 섹션 --- -->
+        <section id="features" class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">
+                    주요 기능 (MVP)
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- 기능 카드 1 -->
+                    <div class="bg-slate-800 p-6 rounded-lg shadow-lg">
+                        <div class="text-blue-400 mb-4">
+                            <i data-lucide="file-text" class="w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">원고 업로드 및 분석</h3>
+                        <p class="text-gray-400">.txt, .docx, .pdf 등 다양한 포맷의 원고를 불러오고 챕터를 자동 인식하여 분석을 시작합니다.</p>
+                    </div>
+                    <!-- 기능 카드 2 -->
+                    <div class="bg-slate-800 p-6 rounded-lg shadow-lg">
+                        <div class="text-blue-400 mb-4">
+                            <i data-lucide="shield-check" class="w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">캐릭터 & 세계관 불일치 탐지</h3>
+                        <p class="text-gray-400">NER 기술을 활용하여 인물, 지명, 설정의 모순을 자동으로 식별하고 리포트를 제공합니다.</p>
+                    </div>
+                    <!-- 기능 카드 3 -->
+                    <div class="bg-slate-800 p-6 rounded-lg shadow-lg">
+                        <div class="text-blue-400 mb-4">
+                            <i data-lucide="bar-chart-horizontal" class="w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">챕터별 구조 분석</h3>
+                        <p class="text-gray-400">각 챕터의 주요 사건을 요약하고, 플롯 진행의 개연성과 서사 흐름의 강약점을 평가합니다.</p>
+                    </div>
+                    <!-- 기능 카드 4 -->
+                    <div class="bg-slate-800 p-6 rounded-lg shadow-lg">
+                        <div class="text-blue-400 mb-4">
+                            <i data-lucide="message-square" class="w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">대화형 QA 인터페이스</h3>
+                        <p class="text-gray-400">"이 장면이 지루할까?" AI 편집자에게 자유롭게 질문하고 전문가 수준의 답변을 받아보세요.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- UI 데모 섹션 --- -->
+        <section id="demo" class="py-20 bg-slate-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">
+                    작동 방식 (UI Mockup)
+                </h2>
+                <div class="max-w-5xl mx-auto bg-slate-700 rounded-xl shadow-2xl overflow-hidden border border-slate-600">
+                    <!-- 가짜 윈도우 헤더 -->
+                    <div class="h-9 bg-slate-800 flex items-center px-4">
+                        <div class="flex space-x-2">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                        </div>
+                        <span class="text-sm text-gray-400 mx-auto">Novel AI Editor</span>
+                    </div>
+                    
+                    <!-- 앱 레이아웃 -->
+                    <div class="flex h-[450px]">
+                        <!-- 사이드바 (분석 패널) -->
+                        <div class="w-1/3 bg-slate-800/50 p-6 border-r border-slate-600 overflow-y-auto">
+                            <h4 class="text-xl font-bold text-white mb-4">분석 결과</h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <h5 class="text-lg font-semibold text-blue-400 mb-2">캐릭터/세계관 불일치</h5>
+                                    <ul class="space-y-2 text-sm">
+                                        <li class="p-2 bg-slate-700 rounded text-gray-300">
+                                            <span class="font-bold text-red-400">[오류]</span> 2챕터 '에이든'의 눈 색상 (파랑) -> 5챕터 (갈색)
+                                        </li>
+                                        <li class="p-2 bg-slate-700 rounded text-gray-300">
+                                            <span class="font-bold text-yellow-400">[경고]</span> '루나'의 마법 설정이 1챕터와 모순됨
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="text-lg font-semibold text-blue-400 mb-2">챕터 구조 분석</h5>
+                                    <ul class="space-y-2 text-sm">
+                                        <li class="p-2 bg-slate-700 rounded text-gray-300">
+                                            <span class="font-bold text-green-400">[강점]</span> 4챕터: 긴장감 고조, 플롯 진행 빠름
+                                        </li>
+                                        <li class="p-2 bg-slate-700 rounded text-gray-300">
+                                            <span class="font-bold text-gray-400">[약점]</span> 6챕터: 서사 흐름이 느슨함
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 메인 콘텐츠 (QA 인터페이스) -->
+                        <div class="w-2/3 flex flex-col h-full bg-slate-700">
+                            <div class="flex-1 p-6 space-y-4 overflow-y-auto">
+                                <!-- AI 말풍선 -->
+                                <div class="flex justify-start">
+                                    <div class="bg-slate-600 text-gray-200 p-3 rounded-lg max-w-md">
+                                        <span class="font-bold text-blue-400 block text-sm">AI 편집자</span>
+                                        안녕하세요. 원고 분석이 완료되었습니다. 6챕터의 흐름이 다소 느슨하게 느껴질 수 있습니다. 이 부분의 긴장감을 높이는 것을 고려해보시겠어요?
+                                    </div>
+                                </div>
+                                <!-- 사용자 말풍선 -->
+                                <div class="flex justify-end">
+                                    <div class="bg-blue-600 text-white p-3 rounded-lg max-w-md">
+                                        6챕터의 문제를 좀 더 구체적으로 알려줄래?
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 입력창 -->
+                            <div class="p-4 bg-slate-800 border-t border-slate-600">
+                                <input 
+                                    type="text" 
+                                    placeholder="AI 편집자에게 질문하기..."
+                                    class="w-full p-2 bg-slate-600 text-white rounded-lg border border-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    disabled
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- 기술 스택 섹션 --- -->
+        <section id="tech" class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">
+                    기술 스택
+                </h2>
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- 기술 카드 1 -->
+                    <div class="bg-slate-800 p-6 rounded-lg shadow-lg">
+                        <div class="text-blue-400 mb-4">
+                            <i data-lucide="cpu" class="w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">AI & 백엔드</h3>
+                        <p class="text-gray-400">Python 기반 AI 분석 엔진과 NLP/LLM을 활용합니다. NER로 설정 오류를 탐지하고 텍스트 요약 모델로 구조를 분석합니다.</p>
+                    </div>
+                    <!-- 기술 카드 2 -->
+                    <div class="bg-slate-800 p-6 rounded-lg shadow-lg">
+                        <div class="text-blue-400 mb-4">
+                            <i data-lucide="monitor" class="w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">데스크톱 앱 (Tauri/Electron)</h3>
+                        <p class="text-gray-400">Tauri 또는 Electron을 사용하여 크로스플랫폼을 지원합니다. 특히 Tauri를 통해 가볍고 빠르며 안전한 앱을 목표로 합니다.</p>
+                    </div>
+                    <!-- 기술 카드 3 -->
+                    <div class="bg-slate-800 p-6 rounded-lg shadow-lg">
+                        <div class="text-blue-400 mb-4">
+                            <i data-lucide="lock" class="w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">보안 & 데이터 (Local-First)</h3>
+                        <p class="text-gray-400">모든 데이터는 기본적으로 사용자 로컬 (SQLite)에 저장됩니다. 오프라인 지원은 물론, 원고 데이터의 외부 유출을 원천 차단합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- 파급효과 섹션 --- -->
+        <section id="impact" class="py-20 bg-slate-800">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">
+                    개발 시 파급효과
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="p-2 bg-blue-500/20 rounded-full mt-1 flex-shrink-0">
+                            <i data-lucide="layers" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">창작 효율성 증대</h4>
+                            <p class="text-gray-300">작가가 단순 오류 검토가 아닌 창의적인 활동에 집중하게 하여, 전반적인 생산성과 집필 속도가 향상됩니다.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-2 bg-blue-500/20 rounded-full mt-1 flex-shrink-0">
+                            <i data-lucide="users" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">작품 품질 상향 평준화</h4>
+                            <p class="text-gray-300">초보 작가도 전문가 수준의 피드백을 통해 원고의 완성도를 높여, 출판 시장의 전반적인 퀄리티 향상에 기여합니다.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="p-2 bg-blue-500/20 rounded-full mt-1 flex-shrink-0">
+                            <i data-lucide="brain" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">새로운 창작 교육 모델</h4>
+                            <p class="text-gray-300">문예 창작 학습자가 AI를 통해 객관적인 피드백과 데이터 기반의 글쓰기 훈련을 할 수 있는 효과적인 교육 도구로 활용됩니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- 로드맵 섹션 --- -->
+        <section id="roadmap" class="py-20 bg-slate-900">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="text-4xl font-bold text-center text-white mb-12">
+                    향후 확장 계획 (Roadmap)
+                </h2>
+                <div class="relative border-l border-slate-700 pl-8">
+                    <!-- 1단계 -->
+                    <div class="mb-10">
+                        <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-2 mt-1"></div>
+                        <h4 class="text-xl font-bold text-white mb-1">1단계 (MVP 이후)</h4>
+                        <p class="text-gray-400">문체 분석 (어휘 반복, 톤 불일치 감지)</p>
+                        <p class="text-gray-400">장르별 클리셰 탐지 (판타지/로맨스 등)</p>
+                    </div>
+                    <!-- 2단계 -->
+                    <div class="mb-10">
+                        <div class="absolute w-4 h-4 bg-slate-600 rounded-full -left-2 mt-1"></div>
+                        <h4 class="text-xl font-bold text-white mb-1">2단계</h4>
+                        <p class="text-gray-400">독자 페르소나 시뮬레이션 (타깃 독자 반응 예측)</p>
+                        <p class="text-gray-400">작업 히스토리 관리 및 비교 기능</p>
+                    </div>
+                    <!-- 3단계 -->
+                    <div>
+                        <div class="absolute w-4 h-4 bg-slate-600 rounded-full -left-2 mt-1"></div>
+                        <h4 class="text-xl font-bold text-white mb-1">3단계</h4>
+                        <p class="text-gray-400">협업 모드 (공동 작가/편집자 실시간 리뷰)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- --- 푸터 --- -->
+    <footer class="py-10 bg-slate-900 border-t border-slate-700">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>© 2025 Novel AI Editor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Lucide 아이콘 활성화 스크립트 -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>
